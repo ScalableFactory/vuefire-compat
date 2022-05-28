@@ -1,6 +1,6 @@
 import { createSnapshot, extractRefs, FirestoreSerializer } from './utils'
 import { walkGet, callOnceWithArg, OperationsType } from '../shared'
-import firebase from 'firebase/app'
+import firebase from 'firebase/compat/app'
 
 export interface FirestoreOptions {
   maxRefDepth?: number

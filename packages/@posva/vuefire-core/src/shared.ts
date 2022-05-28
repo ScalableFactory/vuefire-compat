@@ -1,4 +1,4 @@
-import firebase from 'firebase/app'
+import firebase from 'firebase/compat/app'
 
 export interface OperationsType {
   set: (target: Record<string, any>, key: string | number, value: any) => any

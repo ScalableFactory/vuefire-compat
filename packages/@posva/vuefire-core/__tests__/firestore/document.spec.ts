@@ -1,6 +1,6 @@
 import { bindDocument } from '../../src'
 import { db, spyUnbind, createOps } from '@posva/vuefire-test-helpers'
-import firebase from 'firebase/app'
+import firebase from 'firebase/compat/app'
 import { OperationsType } from '../../src/shared'
 
 describe('documents', () => {

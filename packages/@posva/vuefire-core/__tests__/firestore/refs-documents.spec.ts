@@ -7,7 +7,7 @@ import {
   spyOnSnapshotCallback,
   createOps,
 } from '@posva/vuefire-test-helpers'
-import firebase from 'firebase/app'
+import firebase from 'firebase/compat/app'
 import { OperationsType } from '../../src/shared'
 
 describe('refs in documents', () => {

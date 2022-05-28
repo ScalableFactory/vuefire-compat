@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import { MockFirebase, MockedReference } from 'firebase-mock'
-import firebase from '../../../../node_modules/firebase/index'
+import firebase from '@firebase/firestore-types'
 import { walkSet } from '@posva/vuefire-core'
 
 Vue.config.productionTip = false
@@ -9,17 +9,14 @@ export { Vue, MockFirebase, MockedReference }
 
 export * from './mock'
 
-type FirestoreReference =
-  | firebase.firestore.CollectionReference
-  | firebase.firestore.DocumentReference
-  | firebase.firestore.Query
+type FirestoreReference = firebase.CollectionReference | firebase.DocumentReference | firebase.Query
 
 export function spyUnbind(ref: FirestoreReference) {
   const unbindSpy = jest.fn()
   const onSnapshot = ref.onSnapshot.bind(ref)
   ref.onSnapshot =
     // @ts-ignore
-    fn => {
+    (fn) => {
       // @ts-ignore
       const unbind = onSnapshot(fn)
       return () => {
@@ -49,10 +46,10 @@ export function spyOnSnapshotCallback(ref: FirestoreReference) {
 }
 
 // This makes sure some tests fail by delaying callbacks
-export function delayUpdate(ref: firebase.firestore.DocumentReference, time = 0) {
+export function delayUpdate(ref: firebase.DocumentReference, time = 0) {
   const onSnapshot = ref.onSnapshot.bind(ref)
   // @ts-ignore
-  ref.onSnapshot = fn =>
+  ref.onSnapshot = (fn) =>
     // @ts-ignore
     onSnapshot(async (...args) => {
       await delay(time)
@@ -61,13 +58,13 @@ export function delayUpdate(ref: firebase.firestore.DocumentReference, time = 0)
 }
 
 export function tick() {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     Vue.nextTick(resolve)
   })
 }
 
 export function delay(time: number) {
-  return new Promise(resolve => setTimeout(resolve, time))
+  return new Promise((resolve) => setTimeout(resolve, time))
 }
 
 type WalkSet = typeof walkSet

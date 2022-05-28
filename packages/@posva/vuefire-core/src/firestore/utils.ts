@@ -1,4 +1,4 @@
-import firebase from 'firebase/app'
+import firebase from 'firebase/compat/app'
 import { isTimestamp, isObject, isDocumentRef, TODO } from '../shared'
 
 export type FirestoreReference =

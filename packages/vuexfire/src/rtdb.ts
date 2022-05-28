@@ -6,7 +6,7 @@ import {
   RTDBOptions,
   rtdbOptions,
 } from '@posva/vuefire-core'
-import firebase from 'firebase/app'
+import firebase from 'firebase/compat/app'
 import { CommitFunction } from './shared'
 
 import { Action, ActionContext } from 'vuex'

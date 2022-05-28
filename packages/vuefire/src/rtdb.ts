@@ -6,7 +6,7 @@ import {
   walkSet,
   OperationsType,
 } from '@posva/vuefire-core'
-import firebase from 'firebase/app'
+import firebase from 'firebase/compat/app'
 import Vue, { PluginFunction } from 'vue'
 
 /**

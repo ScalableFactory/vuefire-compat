@@ -1,5 +1,5 @@
 declare module 'firebase-mock' {
-  import firebase from 'firebase/app'
+  import firebase from 'firebase/compat/app'
   type TODO = any
 
   interface MockFirebaseConstructor {

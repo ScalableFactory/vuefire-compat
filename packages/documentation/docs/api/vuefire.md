@@ -5,16 +5,16 @@ For all code samples, we will consider a `db` variable is imported as follows:
 <FirebaseExample id="db creation">
 
 ```js
-import firebase from 'firebase/app'
-import 'firebase/database'
+import firebase from 'firebase/compat/app'
+import 'firebase/compat/database'
 
 // Get a RTDB instance
 const db = firebase.initializeApp({ databaseURL: 'MY PROJECT URL' }).database()
 ```
 
 ```js
-import firebase from 'firebase/app'
-import 'firebase/firestore'
+import firebase from 'firebase/compat/app'
+import 'firebase/compat/firestore'
 
 // Get a Firestore instance
 const db = firebase.initializeApp({ projectId: 'MY PROJECT ID' }).firestore()

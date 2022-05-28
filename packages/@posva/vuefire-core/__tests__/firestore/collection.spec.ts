@@ -1,6 +1,6 @@
 import { bindCollection } from '../../src'
 import { db, createOps, spyUnbind } from '@posva/vuefire-test-helpers'
-import firebase from 'firebase/app'
+import firebase from 'firebase/compat/app'
 import { OperationsType } from '../../src/shared'
 
 describe('collections', () => {
