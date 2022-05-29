@@ -46,7 +46,7 @@
   },
   "homepage": "https://github.com/vuejs/vuefire#readme",
   "peerDependencies": {
-    "firebase": ">=4.0.0"
+    "firebase": ">=9.0.0"
   },
   "devDependencies": {
     "@posva/vuefire-test-helpers": "^1.2.3"
