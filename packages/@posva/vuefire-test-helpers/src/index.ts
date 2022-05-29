@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import { MockFirebase, MockedReference } from 'firebase-mock'
-import firebase from '@firebase/firestore-types'
+import firebase from '../../../../node_modules/firebase/compat/index'
 import { walkSet } from '@posva/vuefire-core'
 
 Vue.config.productionTip = false
@@ -9,7 +9,10 @@ export { Vue, MockFirebase, MockedReference }
 
 export * from './mock'
 
-type FirestoreReference = firebase.CollectionReference | firebase.DocumentReference | firebase.Query
+type FirestoreReference =
+    | firebase.firestore.CollectionReference
+    | firebase.firestore.DocumentReference
+    | firebase.firestore.Query
 
 export function spyUnbind(ref: FirestoreReference) {
   const unbindSpy = jest.fn()
