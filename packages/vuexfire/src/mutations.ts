@@ -1,7 +1,7 @@
 import { MutationTree } from 'vuex'
 import { VUEXFIRE_SET_VALUE, VUEXFIRE_ARRAY_ADD, VUEXFIRE_ARRAY_REMOVE } from './mutations-types'
 
-import { walkSet } from '../../@posva/vuefire-core'
+import { walkSet } from '@posva/vuefire-core'
 
 export const vuexfireMutations: MutationTree<any> = {
   [VUEXFIRE_SET_VALUE](_state, { path, target, data }) {
