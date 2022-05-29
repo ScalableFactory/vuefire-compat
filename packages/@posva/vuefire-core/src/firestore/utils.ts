@@ -78,7 +78,7 @@ export function extractRefs(
         data[key] = Array(ref.length)
         // fill existing refs into data but leave the rest empty
         for (let i = 0; i < ref.length; i++) {
-          const newRef: firebase.firestore.DocumentReference = ref[i]
+          const newRef = ref[i]
           // TODO: this only works with array of primitives but not with nested properties like objects with References
           if (newRef && newRef.path in subsByPath) data[key][i] = subsByPath[newRef.path]
         }
