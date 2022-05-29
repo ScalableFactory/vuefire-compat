@@ -46,7 +46,7 @@ export function walkSet<T>(obj: Record<string, any>, path: string | number, valu
  * Checks if a variable is an object
  * @param o
  */
-export function isObject(o: any): o is object {
+export function isObject(o: any): o is Record<string, unknown> {
   return o && typeof o === 'object'
 }
 
