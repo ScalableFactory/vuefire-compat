@@ -76,16 +76,6 @@ function subscribeToDocument(
   }
 }
 
-interface SubscribeToRefsParameter {
-  subs: Record<string, FirestoreSubscription>
-  target: CommonBindOptionsParameter['vm']
-  refs: Record<string, firebase.firestore.DocumentReference>
-  path: string | number
-  depth: number
-  resolve: CommonBindOptionsParameter['resolve']
-  ops: CommonBindOptionsParameter['ops']
-}
-
 // NOTE: not convinced by the naming of subscribeToRefs and subscribeToDocument
 // first one is calling the other on every ref and subscribeToDocument may call
 // updateDataFromDocumentSnapshot which may call subscribeToRefs as well
