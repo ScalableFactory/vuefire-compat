@@ -43,6 +43,8 @@
     "release": "lerna publish from-git",
     "prepare": "lerna run prepare",
     "changelog": "conventional-changelog -p angular -r 2 -i CHANGELOG.md -s",
-    "test": "lerna run test"
+    "test": "lerna run test",
+    "build": "yarn && cd packages/vuexfire && yarn build && cd ../vuefire && yarn build && cd ../@posva/vuefire-core && yarn build",
+    "prepack": "yarn build"
   }
 }
