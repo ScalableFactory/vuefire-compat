@@ -80,5 +80,6 @@ export function callOnceWithArg<T, K>(fn: (arg: T) => K, argFn: () => T): () => 
       called = true
       return fn(argFn())
     }
+    return
   }
 }
