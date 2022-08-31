@@ -1,6 +1,6 @@
 import { bindDocument, firestoreOptions, bindCollection } from '../../src'
 import { db, createOps } from '@posva/vuefire-test-helpers'
-import firebase from 'firebase/app'
+import firebase from 'firebase/compat/app'
 
 describe('options', () => {
   let collection: firebase.firestore.CollectionReference,

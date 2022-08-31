@@ -1,4 +1,4 @@
-import firebase from 'firebase/app'
+import firebase from 'firebase/compat/app'
 
 export interface OperationsType {
   set: (target: Record<string, any>, key: string | number, value: any) => any
@@ -46,7 +46,7 @@ export function walkSet<T>(obj: Record<string, any>, path: string | number, valu
  * Checks if a variable is an object
  * @param o
  */
-export function isObject(o: any): o is object {
+export function isObject(o: any): o is Record<string, unknown> {
   return o && typeof o === 'object'
 }
 
@@ -80,5 +80,6 @@ export function callOnceWithArg<T, K>(fn: (arg: T) => K, argFn: () => T): () => 
       called = true
       return fn(argFn())
     }
+    return
   }
 }

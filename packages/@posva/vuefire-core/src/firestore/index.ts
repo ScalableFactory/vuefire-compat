@@ -1,6 +1,6 @@
 import { createSnapshot, extractRefs, FirestoreSerializer } from './utils'
 import { walkGet, callOnceWithArg, OperationsType } from '../shared'
-import firebase from 'firebase/app'
+import firebase from 'firebase/compat/app'
 
 export interface FirestoreOptions {
   maxRefDepth?: number
@@ -74,16 +74,6 @@ function subscribeToDocument(
     unbind()
     unsubscribeAll(subs)
   }
-}
-
-interface SubscribeToRefsParameter {
-  subs: Record<string, FirestoreSubscription>
-  target: CommonBindOptionsParameter['vm']
-  refs: Record<string, firebase.firestore.DocumentReference>
-  path: string | number
-  depth: number
-  resolve: CommonBindOptionsParameter['resolve']
-  ops: CommonBindOptionsParameter['ops']
 }
 
 // NOTE: not convinced by the naming of subscribeToRefs and subscribeToDocument

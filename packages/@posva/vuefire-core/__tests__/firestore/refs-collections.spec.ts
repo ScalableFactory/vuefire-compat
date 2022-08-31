@@ -1,7 +1,7 @@
 import { bindCollection, FirestoreOptions } from '../../src'
 import { db, delay, spyUnbind, delayUpdate, createOps } from '@posva/vuefire-test-helpers'
 import { OperationsType } from '../../src/shared'
-import firebase from 'firebase/app'
+import firebase from 'firebase/compat/app'
 
 describe('refs in collections', () => {
   let collection: firebase.firestore.CollectionReference,

@@ -1,6 +1,6 @@
 import { firestorePlugin } from '../../src'
 import { db, tick, delayUpdate, Vue } from '@posva/vuefire-test-helpers'
-import firebase from 'firebase/app'
+import firebase from 'firebase/compat/app'
 import { CombinedVueInstance } from 'vue/types/vue'
 
 Vue.use(firestorePlugin)

@@ -10,8 +10,8 @@ While Firebase SDK does provide an API to keep your local data in sync with any 
 
 ```js
 // get RTDB the database instance
-import firebase from 'firebase/app'
-import 'firebase/database'
+import firebase from 'firebase/compat/app'
+import 'firebase/compat/database'
 
 const db = firebase
   .initializeApp({ databaseURL: 'https://MY-DATABASE.firebaseio.com' })
@@ -91,8 +91,8 @@ new Vue({
 
 ```js
 // get Firestore database instance
-import firebase from 'firebase/app'
-import 'firebase/firestore'
+import firebase from 'firebase/compat/app'
+import 'firebase/compat/firestore'
 
 const db = firebase.initializeApp({ projectId: 'MY PROJECT ID' }).firestore()
 
@@ -139,8 +139,8 @@ Now let's look at the equivalent code with vuefire:
 <FirebaseExample id="getting-started">
 
 ```js
-import firebase from 'firebase/app'
-import 'firebase/database'
+import firebase from 'firebase/compat/app'
+import 'firebase/compat/database'
 
 const db = firebase
   .initializeApp({ databaseURL: 'https://MY-DATABASE.firebaseio.com' })
@@ -157,8 +157,8 @@ new Vue({
 ```
 
 ```js
-import firebase from 'firebase/app'
-import 'firebase/firestore'
+import firebase from 'firebase/compat/app'
+import 'firebase/compat/firestore'
 
 const db = firebase.initializeApp({ projectId: 'MY PROJECT ID' }).firestore()
 

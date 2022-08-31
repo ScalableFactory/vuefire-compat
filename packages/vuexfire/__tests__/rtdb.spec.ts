@@ -1,7 +1,7 @@
 import Vuex from 'vuex'
 import { firebaseAction, vuexfireMutations } from '../src'
 import { MockFirebase, tick, Vue } from '@posva/vuefire-test-helpers'
-import firebase from 'firebase/app'
+import firebase from 'firebase/compat/app'
 
 import { RTDBOptions } from '@posva/vuefire-core/dist/packages/@posva/vuefire-core/src'
 

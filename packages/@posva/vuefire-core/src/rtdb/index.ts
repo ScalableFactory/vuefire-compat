@@ -1,4 +1,4 @@
-import firebase from 'firebase/app'
+import firebase from 'firebase/compat/app'
 import { createRecordFromRTDBSnapshot, indexForKey, RTDBSerializer } from './utils'
 import { OperationsType, ResetOption } from '../shared'
 
@@ -17,7 +17,7 @@ const DEFAULT_OPTIONS: Required<RTDBOptions> = {
 export { DEFAULT_OPTIONS as rtdbOptions }
 
 interface CommonBindOptionsParameter {
-  vm: object
+  vm: Record<string, unknown>
   key: string
   resolve: (value: any) => void
   reject: (error: any) => void

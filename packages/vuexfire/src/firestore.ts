@@ -7,7 +7,7 @@ import {
   firestoreOptions,
 } from '@posva/vuefire-core'
 import { CommitFunction } from './shared'
-import firebase from 'firebase/app'
+import firebase from 'firebase/compat/app'
 import { ActionContext, Action } from 'vuex'
 
 const commitOptions = { root: true }

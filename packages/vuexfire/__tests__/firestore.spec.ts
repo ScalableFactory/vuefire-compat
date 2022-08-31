@@ -1,7 +1,7 @@
 import Vuex from 'vuex'
 import { vuexfireMutations, firestoreAction } from '../src'
 import { db, tick, Vue, delayUpdate } from '@posva/vuefire-test-helpers'
-import firebase from 'firebase/app'
+import firebase from 'firebase/compat/app'
 import { FirestoreOptions } from '@posva/vuefire-core/dist/packages/@posva/vuefire-core/src'
 
 Vue.use(Vuex)
