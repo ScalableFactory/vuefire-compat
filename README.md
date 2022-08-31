@@ -1,3 +1,7 @@
+# Forked to make it Firebase 9 compatible
+see: https://github.com/vuejs/vuefire/issues/1128
+
+
 <p align="center"><a href="https://vuefire.vuejs.org" target="_blank" rel="noopener noreferrer"><img width="100" src="https://vuefire.vuejs.org/vuefire-logo.svg" alt="VueFire logo"></a></p>
 
 <h1 align="center">Vuefire & Vuexfire</h1>
