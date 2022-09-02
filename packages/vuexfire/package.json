@@ -1,5 +1,5 @@
 {
-  "name": "vuexfire",
+  "name": "@scalablefactory/vuexfire-fork",
   "version": "3.2.5",
   "description": "Firestore binding for Vuex",
   "main": "dist/vuexfire.common.js",
@@ -42,9 +42,7 @@
   "peerDependencies": {
     "firebase": ">=9.0.0"
   },
-  "author": {
-    "name": "Eduardo San Martin Morote"
-  },
+  "author": "Eduardo San Martin Morote",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/vuejs/vuefire/issues"
@@ -56,6 +54,5 @@
   },
   "dependencies": {
     "@posva/vuefire-core": "^2.3.4"
-  },
-  "gitHead": "e3e2df3624572cec86ed861f2472df4d143f2265"
+  }
 }

@@ -1,4 +1,4 @@
-# Vuexfire [![Build Status](https://badgen.net/circleci/github/vuejs/vuefire)](https://circleci.com/gh/vuejs/vuefire) [![npm package](https://badgen.net/npm/v/vuexfire)](https://www.npmjs.com/package/vuexfire) [![coverage](https://badgen.net/codecov/c/github/vuejs/vuefire)](https://codecov.io/github/vuejs/vuefire)
+# Forked Vuexfire [![Build Status](https://badgen.net/circleci/github/vuejs/vuefire)](https://circleci.com/gh/vuejs/vuefire) [![npm package](https://badgen.net/npm/v/vuexfire)](https://www.npmjs.com/package/vuexfire) [![coverage](https://badgen.net/codecov/c/github/vuejs/vuefire)](https://codecov.io/github/vuejs/vuefire)
 
 > SSR ready Firebase binding for [Vuex](https://github.com/vuejs/vuex)
 
@@ -53,14 +53,12 @@ context, `bindFirestoreRef` and `unbindFirestoreRef`:
 ```js
 import { firestoreAction } from 'vuexfire'
 
-const setTodosRef = firestoreAction(
-  ({ bindFirestoreRef, unbindFirestoreRef }, { ref }) => {
-    // this will unbind any previously bound ref to 'todos'
-    bindFirestoreRef('todos', ref)
-    // you can unbind any ref easily
-    unbindFirestoreRef('user')
-  }
-)
+const setTodosRef = firestoreAction(({ bindFirestoreRef, unbindFirestoreRef }, { ref }) => {
+  // this will unbind any previously bound ref to 'todos'
+  bindFirestoreRef('todos', ref)
+  // you can unbind any ref easily
+  unbindFirestoreRef('user')
+})
 ```
 
 Access it as a usual piece of the state:
